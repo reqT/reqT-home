@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JBake</title>
+    <link>http://reqT.org</link>
+    <atom:link href="http://reqT.org/feed.xml" rel="self" type="application/rss+xml" />
+    <description>JBake Bootstrap Template</description>
+    <language>en-gb</language>
+    <pubDate>fr, 1 aug 2014 01:03:47 +0200</pubDate>
+    <lastBuildDate>fr, 1 aug 2014 01:03:47 +0200</lastBuildDate>
+
+    
+
+  </channel> 
+</rss>
