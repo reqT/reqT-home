@@ -4,14 +4,27 @@ type=page
 status=published
 ~~~~~~
 
-<a href="http://reqt.org/reqT.jar" class="btn btn-success btn-lg">Download reqT.jar</a> Latest stable version 3.0.0RC1
+<a href="http://reqt.org/reqT.jar" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download reqT.jar </a>  27MB v3.0.x-SNAPSHOT latest stable [all versions](history.html)
 
+###How to run reqT
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus. 
-Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, 
-mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo 
-ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet 
-ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, 
-id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In 
-consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere 
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.
+1. Download the reqT.jar above and save it in some directory
+
+2. Open a terminal, navigate to that directory and type:
+```
+    java -jar reqT.jar
+```
+
+If reqT does not start:
+
+* Check if you have Java 1.7.x installed by opening a terminal window (bash, cmd, or powershell etc.) and type this command:
+```
+    java -version 
+```    
+     This should print something similar to 
+     `java version "1.7.0_65"`
+     
+* If the above step failed then install Java 1.7 from here: 
+    * [Windows/Mac: scroll down to Java SE7](http://www.oracle.com/technetwork/java/javase/downloads) 
+    * [linux install openjdk-7] (http://openjdk.java.net/install/index.html) 
+

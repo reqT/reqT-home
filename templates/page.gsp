@@ -6,7 +6,7 @@
 		<h1>${content.title}</h1>
 	</div>
 
-	<p>${content.body}</p>
+	<div class="page-max-width">${content.body}</div>
 
 	<hr />
 
