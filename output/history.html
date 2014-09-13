@@ -47,8 +47,9 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="documentation.html">Documentation</a></li>
             <li><a href="download.html">Download</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="https://github.com/reqT/reqT/wiki/reqT-FAQ">FAQ</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="license/index.html">License</a></li>
           </ul>
@@ -61,17 +62,20 @@
 		<h1>reqT History</h1>
 	</div>
 
-	<div class="page-max-width"><p>The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund University</a> by Prof. <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>, to provide a free tool for illustrating essential requirements engineering concepts in software engineering teaching of MSc students. Since then reqT has grown into a comprehensive requirements engineering workbench and laboratory for capturing requirements modelling ideas based on experiences from practice and results from research. </p><h4><a href="http://reqt.org/reqT-v3.0.0-RC1.jar">Version 3.0.0-RC1</a> <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a></h4><p>2014-08-01: <em>Rebuild from scratch</em></p>
+	<div class="page-max-width"><p>The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund University</a> by Prof. <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>, to provide a free tool for illustrating essential requirements engineering concepts in software engineering teaching of MSc students. Since then reqT has grown into a comprehensive requirements engineering workbench and laboratory for capturing requirements modelling ideas based on experiences from practice and results from research. </p><h4><a href="http://reqt.org/reqT-v3.0.0.jar">Version 3.0.0</a> <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a></h4><p>2014-09-07: <strong>Release 3.0.0</strong></p>
 <ul>
-  <li>Improved DSL and metamodel</li>
-  <li>Relations target submodel recursively</li>
-  <li>Replace direct inheritance of the Scala collection lib with explicit conversions</li>
-  <li>Add GUI with tree view and editor panes</li>
-  <li>Add syntax coloring using RSyntaxTextArea and JFlex</li>
-  <li>Add auto-completion in GUI of metamodel terms by ctrl+space via Autocomplete</li>
-  <li>Add graphviz export and visualization via pdf</li>
-  <li>Metamodel is expressed in reqT enabling DSL generation by metaprogramming</li>
-  <li>Include the scala libs in jar to require only Java JRE 1.7</li>
+  <li>Graphical user interface with foldable tree view and syntax-colored text editor</li>
+  <li>Fully recursive modelling allowing models inside models at arbitrary depth</li>
+  <li>New powerful Scala-embedded DSL and more comprehensive metamodel</li>
+  <li>Metamodel-aware auto-completion in text editor</li>
+  <li>Export to graphviz, html, spreadsheet and more</li>
+  <li>New external DSL called <em>reqtext</em> using indentation instead of parenthesis</li>
+  <li>Meta-programming-enabled metamodel customization</li>
+  <li>All required libs are included in a self-contained jar-file - no need to install Scala</li>
+</ul><h4><a href="http://reqt.org/reqT-v3.0.0-RC1.jar">Version 3.0.0-RC1</a></h4><p>2014-08-01: Release Candidate 1 of version 3.0.0</p>
+<ul>
+  <li>Rebuild from scratch</li>
+  <li>Many new features (see notes on release 3.0.0 above)</li>
 </ul><h2>Old versions <a href="http://reqt.org/old-site/" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-remove"></span> Visit old site </a></h2><h4><a href="http://reqt.org/reqT-v2.3.jar">Version 2.3</a></h4><p>2014-01-26: <em>Constraint solving, hierarchy and variability</em></p>
 <ul>
   <li>Add constraint solving by integration with JaCoP</li>

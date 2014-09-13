@@ -11,7 +11,7 @@
     <a href="https://github.com/reqT/reqT" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-align-left"></span> View reqT source code</a> 
     
   <div class="page-max-width">
-    <h3> reqT &ndash; a requirements engineering tool </h3>
+    <h3> reqT &ndash; a scalable requirements tool </h3>
     <p> reqT is a <b>free</b>, <b>flexible</b> and <b>scalable</b> requirements engineering tool <br/> for 
     system analysts, developers and software engineering students. </p>
 

@@ -13,6 +13,17 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 
+/*bjornr added to fix anchor offset problem */
+/* 
+http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+*/
+a[id]:before {
+    content:"";
+    display:block;
+    height:50px;
+    margin:-30px 0 0;
+}
+
 html,
 body {
   height: 100%;
@@ -61,6 +72,6 @@ body {
 }
 
 code {
-  font-size: 80%;
+  font-size: 100%;
   color: #7A005E;
 }

@@ -9,11 +9,11 @@ status=published
 ###How to run reqT
 
 1. Download the reqT.jar above and save it in some directory
-
 2. Open a terminal, navigate to that directory and type:
 ```
     java -jar reqT.jar
 ```
+3. Try out [Hello reqT](documentation.html#hello) 
 
 If reqT does not start:
 

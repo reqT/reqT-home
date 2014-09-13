@@ -5,19 +5,25 @@ status=published
 ~~~~~~
 The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund University</a> by Prof. <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>, to provide a free tool for illustrating essential requirements engineering concepts in software engineering teaching of MSc students. Since then reqT has grown into a comprehensive requirements engineering workbench and laboratory for capturing requirements modelling ideas based on experiences from practice and results from research.  
 
-####[Version 3.0.0-RC1](http://reqt.org/reqT-v3.0.0-RC1.jar) <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a> 
+####[Version 3.0.0](http://reqt.org/reqT-v3.0.0.jar) <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a> 
 
-2014-08-01: *Rebuild from scratch*
+2014-09-07: **Release 3.0.0**
 
-* Improved DSL and metamodel
-* Relations target submodel recursively
-* Replace direct inheritance of the Scala collection lib with explicit conversions
-* Add GUI with tree view and editor panes 
-* Add syntax coloring using RSyntaxTextArea and JFlex
-* Add auto-completion in GUI of metamodel terms by ctrl+space via Autocomplete
-* Add graphviz export and visualization via pdf
-* Metamodel is expressed in reqT enabling DSL generation by metaprogramming
-* Include the scala libs in jar to require only Java JRE 1.7 
+* Graphical user interface with foldable tree view and syntax-colored text editor 
+* Fully recursive modelling allowing models inside models at arbitrary depth
+* New powerful Scala-embedded DSL and more comprehensive metamodel 
+* Metamodel-aware auto-completion in text editor
+* Export to graphviz, html, spreadsheet  and more
+* New external DSL called *reqtext* using indentation instead of parenthesis 
+* Meta-programming-enabled metamodel customization
+* All required libs are included in a self-contained jar-file - no need to install Scala
+
+####[Version 3.0.0-RC1](http://reqt.org/reqT-v3.0.0-RC1.jar)  
+
+2014-08-01: Release Candidate 1 of version 3.0.0
+
+* Rebuild from scratch
+* Many new features (see notes on release 3.0.0 above)
 
 ## Old versions <a href="http://reqt.org/old-site/" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-remove"></span> Visit old site </a> 
 

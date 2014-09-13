@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>reqT</title>
+    <title>reqT Metamodel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -57,44 +57,158 @@
       </div>
     </div>
     <div class="container">
-
+	
 	<div class="page-header">
-		<h1>reqT Home</h1>
+		<h1>reqT Metamodel</h1>
 	</div>
-  
-    <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download reqT </a>
-    
-    <a href="https://github.com/reqT/reqT" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-align-left"></span> View reqT source code</a> 
-    
-  <div class="page-max-width">
-    <h3> reqT &ndash; a scalable requirements tool </h3>
-    <p> reqT is a <b>free</b>, <b>flexible</b> and <b>scalable</b> requirements engineering tool <br/> for 
-    system analysts, developers and software engineering students. </p>
 
-    <p> With reqT you can ... 
-      <ul>
-        <li> model, analyse, visualize and prioritize requirements  </li>
-        <li> combine natural language with formal structure </li>
-        <li> flexibly mix abstraction levels and modelling approaches
-        <li> integrate requirements and test specification </li>
-        <li> export and import models via open formats  </li>
-        <li> manipulate models with powerful Scala scripts  </li>
-        <li> allocate requirements to releases with constraint solving </li>
-      </ul>
-    </p> 
-    
-    <p>
-    reqT is an open source project started in 2010 at 
-    <a href="http://serg.cs.lth.se/">Lund University</a>, Sweden.</br>
-    
-    The development is lead by 
-    <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>. 
-    
-    Contributions are welcome!
-    </p>
+	<div class="page-max-width"><h2>Contents</h2>
+<ul>
+  <li><a href="#ents"> Entity types </a></li>
+  <li><a href="#attrs"> Attribute types </a></li>
+  <li><a href="#rels"> Relation types </a></li>
+</ul>
+<hr/><h3><a id="ents"> Entity types </a></h3>
+<ul>
+  <li>General
+  <ul>
+    <li>Item</li>
+    <li>Label</li>
+    <li>Meta</li>
+    <li>Section</li>
+    <li>Term</li>
+  </ul></li>
+  <li>Context
+  <ul>
+    <li>Actor</li>
+    <li>App</li>
+    <li>Component</li>
+    <li>Domain</li>
+    <li>Module</li>
+    <li>Product</li>
+    <li>Release</li>
+    <li>Resource</li>
+    <li>Risk</li>
+    <li>Service</li>
+    <li>Stakeholder</li>
+    <li>System</li>
+    <li>User</li>
+  </ul></li>
+  <li>Requirement
+  <ul>
+    <li>DataReq
+    <ul>
+      <li>Class</li>
+      <li>Data</li>
+      <li>Input</li>
+      <li>Member</li>
+      <li>Output</li>
+      <li>Relationship</li>
+    </ul></li>
+    <li>DesignReq
+    <ul>
+      <li>Design</li>
+      <li>Screen</li>
+      <li>MockUp</li>
+    </ul></li>
+    <li>FunctionalReq
+    <ul>
+      <li>Function</li>
+      <li>Interface</li>
+    </ul></li>
+    <li>GeneralReq
+    <ul>
+      <li>Epic</li>
+      <li>Feature</li>
+      <li>Goal</li>
+      <li>Idea</li>
+      <li>Issue</li>
+      <li>Req</li>
+      <li>Ticket</li>
+      <li>WorkPackage</li>
+    </ul></li>
+    <li>QualityReq
+    <ul>
+      <li>Breakpoint</li>
+      <li>Barrier</li>
+      <li>Quality</li>
+      <li>Target</li>
+    </ul></li>
+    <li>ScenarioReq
+    <ul>
+      <li>Scenario</li>
+      <li>Task</li>
+      <li>Test</li>
+      <li>Story</li>
+      <li>UseCase</li>
+    </ul></li>
+    <li>VariabilityReq
+    <ul>
+      <li>VariationPoint</li>
+      <li>Variant</li>
+    </ul></li>
+  </ul></li>
+</ul><h3><a id="attrs"> Attribute types </a></h3>
+<ul>
+  <li>StringAttribute
+  <ul>
+    <li>Code</li>
+    <li>Comment</li>
+    <li>Deprecated</li>
+    <li>Example</li>
+    <li>Expectation</li>
+    <li>FileName</li>
+    <li>Gist</li>
+    <li>Image</li>
+    <li>Spec</li>
+    <li>Text</li>
+    <li>Title</li>
+    <li>Why</li>
+  </ul></li>
+  <li>IntAttribute
+  <ul>
+    <li>Benefit</li>
+    <li>Capacity</li>
+    <li>Cost</li>
+    <li>Damage</li>
+    <li>Frequency</li>
+    <li>Min</li>
+    <li>Max</li>
+    <li>Order</li>
+    <li>Prio</li>
+    <li>Probability</li>
+    <li>Profit</li>
+    <li>Value</li>
+  </ul></li>
+  <li>StatusValueAttribute
+  <ul>
+    <li>Status</li>
+  </ul></li>
+  <li>VectorAttribute
+  <ul>
+    <li>Constraints</li>
+  </ul></li>
+</ul><h3><a id="rels"> Relation types </a></h3>
+<ul>
+  <li>binds</li>
+  <li>deprecates</li>
+  <li>excludes</li>
+  <li>has</li>
+  <li>helps</li>
+  <li>hurts</li>
+  <li>impacts</li>
+  <li>implements</li>
+  <li>interactsWith</li>
+  <li>is</li>
+  <li>precedes</li>
+  <li>requires</li>
+  <li>relatesTo</li>
+  <li>superOf</li>
+  <li>verifies</li>
+</ul></div>
 
+	<hr />
 
-  </div>  
 		</div>
 		<div id="push"></div>
     </div>
