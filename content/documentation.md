@@ -7,7 +7,7 @@ status=published
 
 * <a href="#hello"> Hello reqT </a>
 * <a href="#intro"> Introduction to reqT</a>
-* <a href="metamodel.html"> reqT Metamodel </a>
+* <a href="metamodel.html"> The reqT metamodel </a>
 * <a href="#pub"> Publications and presentations </a>
 * <a href="#diff"> Differences between reqT v3 and v2 </a>
 * <a href="#old"> Old documentation for reqT v2 </a>
@@ -16,7 +16,7 @@ status=published
 
 ## <a id="hello"> Hello reqT </a>
 
-* Download [reqT.jar](download.html) and run this console command: `java -jar reqT.jar`
+* Download [reqT.jar](download.html) and run this command: `java -jar reqT.jar`
 * Type this in the reqT console:
 
         val m = Model(Feature("hello") has (Spec("Hello reqT!"), Prio(1))) 
@@ -25,11 +25,11 @@ status=published
 <hr/>        
 ## <a id="intro"> Introduction to reqT </a>
 
-reqT is a free and scalable requirements engineering tool. With reqT you can create, analyse and visualize requirements models, ranging from very small models containing only a few sketchy elements to very large models with thousands of requirements. 
+reqT is a scalable requirements modelling tool. With reqT you can create, edit, analyse and visualize requirements, ranging from very small models containing only a few sketchy elements to very large models with thousands of requirements. 
 
-In reqT, your requirements are represented as a textual language that enables you to, for example, paste models into emails, version-control your model text files using e.g. git, store your models at e.g. gitHub, and other things you normally do with code. 
+In reqT, requirements are represented in a textual language that enables you to, for example, paste models into emails, version-control your models using git or svn, store your models at GitHub or Bitbucket, and other things you normally do with code. 
 
-A reqT requirements model is represented using an internal DSL embedded in [Scala](http://en.wikipedia.org/wiki/Scala_%28programming_language%29), which means that your models are computational entities in an efficient data structure that can be manipulated using concise Scala scripts.
+### Creating reqT models
 
 A reqT ```Model``` contains a sequence of elements. Elements can be one of the following three types:  
 
@@ -37,6 +37,19 @@ A reqT ```Model``` contains a sequence of elements. Elements can be one of the f
   * attributes, such as ```Prio(1)``` or ```Spec("Hello reqT!")``` 
   * relations, such as ```Feature("x") has Prio(1)``` or ```Feature("x") requires Feature("y")```
 
+Here is an example of a model that expresses different feature benefits according to two different stakeholders:
+
+<iframe src="code/model-benefit.html" style="border-style:none; width:800px; height: 200px;"><pre class="prettyprint"><code class="lang-scala">Model(
+  Stakeholder("Ada") has (
+    Feature("export") has Benefit(4), 
+    Feature("print") has Benefit(1), 
+    Feature("upload") has Benefit(2)), 
+  Stakeholder("Charles") has (
+    Feature("export") has Benefit(2), 
+    Feature("print") has Benefit(1), 
+    Feature("upload") has Benefit(1)))
+</code></pre></iframe>        
+  
 There are many different types of entities, attributes and relations, as listed [here](metamodel.html). You can use any combination of the available entities, attributes and relations as long as you follow these rules:  
 
   * An entity must have an id, e.g. ```Feature("myId")```.
@@ -45,8 +58,19 @@ There are many different types of entities, attributes and relations, as listed 
       * Int attributes must have an integer, e.g. ```Prio(1)``` or ```Max(100)```. 
   * A relation must connect and entity with an element or a sequence of elements within parenthesis via a link of some relation type, e.g. the relation ```Feature("x") has Prio(1)``` connects a ```Feature``` entity with id "x" to a ```Prio``` attribute via a link of type ```has```.
 
+### The reqT Scala-embedded DSL 
+  
+A requirements model in reqT is represented by a language that is embedded in [Scala](http://en.wikipedia.org/wiki/Scala_%28programming_language%29), a so called internal or embedded Domain-Specific Language [DSL](http://en.wikipedia.org/wiki/Domain-specific_language). This means that your models are represented using Scala classes in an efficient data structure that can be manipulated using concise and powerful Scala scripts.
 
+The Scala class hierarchy of the Elem, Node, Relation, Attribute and Entity classes are shown below.
 
+<img src="img/metamodel-simple.svg" alt="Elem class diagram"/> 
+
+Elem is the superclass of Node and Relation. A Node can be either an Attribute or an Entity. A Relation has three value fields: entity, link and tail. The tail of a relation is a new Model that recursively can contain zero or more objects of type Elem.
+
+<img src="img/metamodel-with-key.svg" alt="Elem, Model and Key class diagram"/> 
+ 
+ 
 <hr/>
 ## <a id="diff"> Differences between reqT v3 and v2 </a>
 
