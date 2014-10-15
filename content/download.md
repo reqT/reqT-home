@@ -13,8 +13,12 @@ status=published
 ```
     java -jar reqT.jar
 ```
-3. Try out [Hello reqT](documentation.html#hello) 
+3. Type this into the console by the `reqT>` prompt and press enter:
 
+        println("Hello reqT!") 
+        
+4. Then try out the "hello world" example Model [here](http://reqt.org/documentation.html#hello)    
+        
 If reqT does not start:
 
 * Check if you have Java 1.7.x installed by opening a terminal window (bash, cmd, or powershell etc.) and type this command:

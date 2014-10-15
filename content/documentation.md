@@ -17,9 +17,12 @@ status=published
 ## <a id="hello"> Hello reqT </a>
 
 * Download [reqT.jar](download.html) and run this command: `java -jar reqT.jar`
-* Type this in the reqT console:
+* Copy this "hello world" Model into the reqT console (paste with right click the press Enter):
 
-        val m = Model(Feature("hello") has (Spec("Hello reqT!"), Prio(1))) 
+        val m = Model(Feature("hi") has (Spec("hello world"), Prio(1))) 
+        
+    Type this to edit the model:    
+        
         edit(m)
 
 <hr/>        
@@ -68,9 +71,30 @@ The Scala class hierarchy of the Elem, Node, Relation, Attribute and Entity clas
 
 Elem is the superclass of Node and Relation. A Node can be either an Attribute or an Entity. A Relation has three value fields: entity, link and tail. The tail of a relation is a new Model that recursively can contain zero or more objects of type Elem.
 
-<img src="img/metamodel-with-key.svg" alt="Elem, Model and Key class diagram"/> 
- 
- 
+You can check out the different available elements of the reqT metamodel [here](http://reqt.org/metamodel.html).
+
+#### When to use which element of the reqT metamodel?
+
+The reqT metamodel gives you a large bag of requirements-related concepts that you can combine freely in many different ways, as long as you follow some basic rules. What is a good or bad requirements model is determined by the context and there is no universal "truth" about the best way to model. However, here is some advice that you may want to follow:
+
+  * Some parts of your requirements model may need to be more elaborated than other parts, as your requirements may be more or less risky to be badly implemented downstream.
+  * If you work on modelling intentions (goals) and attach rationale (why) to your models, the risk for bad implementation is often reduced. Use the `Goal` entity and/or the `Why` attribute in your reqT models.
+  * If you include examples in combination with intention and rationale, it is more likely that your models will be interpreted in a relevant way in downstream development. You can use the `Example` attribute, as shown in the model below with a feature that includes information on both goal (why), a product level specification, as well as an illustrative example:
+<iframe src="code/model-why-spec-example.html" style="border-style:none; width:800px; height: 200px;"><pre class="prettyprint"><code class="lang-scala">Model(
+  Feature("navigate") has (
+    Why("Measuring neural response is a bit painful to the  patient. 
+         Electrodes must be kept in place ... 
+         So both hands should be at the patient during a measurement."),
+    Spec("It shall be possible to perform the commands start, stop, 
+          ... with both hands at the patient."),
+    Example("Might be done with mini keyboard (wrist keys), foot pedal, 
+            voice recognition, etc.")
+  )
+)
+</code></pre></iframe>   
+  
+<hr/>
+--- End of Introduction ---
 <hr/>
 ## <a id="diff"> Differences between reqT v3 and v2 </a>
 
@@ -129,11 +153,11 @@ The documents below explain the background of reqT and give examples of usage in
 
 The documents below explain the background of reqT and give examples of usage in reqT v2. Check out the <a href="#diff"> differences between reqT v3 and reqT v2 </a> before you try the examples in the below documents in reqT v3. If an example does not work in v3, it is due to limitations in backward compatibility. 
 
-[Introduction to reqT](http://reqt.org/reqT-intro.pdf) 
+[Old introduction to reqT v2](http://reqt.org/reqT-intro.pdf) 
 
-[reqT manual draft version 0.1](http://reqt.org/reqT-manual.pdf) 
+[reqT v2 manual draft version 0.1](http://reqt.org/reqT-manual.pdf) 
 
-[reqT metamodel](http://reqt.org/metamodel.png) 
+[reqT v2 metamodel](http://reqt.org/metamodel.png) 
 
 [reqT status promotion ladder](http://reqt.org/reqT-status.pdf) 
 
