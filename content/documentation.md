@@ -7,6 +7,7 @@ status=published
 
 * <a href="#hello"> Hello reqT </a>
 * <a href="#intro"> Introduction to reqT</a>
+* <a href="https://github.com/reqT/reqT/blob/3.0.x/doc/lab1/lab1.pdf?raw=true"> Tutorial (pdf)</a>
 * <a href="metamodel.html"> The reqT metamodel </a>
 * <a href="#pub"> Publications and presentations </a>
 * <a href="#diff"> Differences between reqT v3 and v2 </a>
@@ -16,12 +17,12 @@ status=published
 
 ## <a id="hello"> Hello reqT </a>
 
-* Download [reqT.jar](download.html) and run this command: `java -jar reqT.jar`
-* Copy this "hello world" Model into the reqT console (paste with right click the press Enter):
+* [Download](download.html) reqT and start the reqT console with this command: `java -jar reqT.jar`
+* Type this into the reqT console (or copy-paste it using Ctrl+C and right click):
 
         val m = Model(Feature("hi") has (Spec("hello world"), Prio(1))) 
         
-    Type this to edit the model:    
+* Type this to edit the model:    
         
         edit(m)
 
@@ -92,8 +93,9 @@ The reqT metamodel gives you a large bag of requirements-related concepts that y
   )
 )
 </code></pre></iframe>   
-  
-<hr/>
+
+After this introduction do the [reqT Tutorial Lab 1](https://github.com/reqT/reqT/blob/3.0.x/doc/lab1/lab1.pdf?raw=true) (pdf).  
+
 --- End of Introduction ---
 <hr/>
 ## <a id="diff"> Differences between reqT v3 and v2 </a>

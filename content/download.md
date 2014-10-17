@@ -6,20 +6,22 @@ status=published
 
 <a href="http://reqt.org/reqT.jar" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download reqT.jar </a>  27MB v3.0.x-SNAPSHOT latest stable [all versions](history.html)
 
-###How to run reqT
+###<a id="how-to-run">How to run reqT:</a>
 
 1. Download the reqT.jar above and save it in some directory
 2. Open a terminal, navigate to that directory and type:
 ```
     java -jar reqT.jar
 ```
+    The above requires java. To check and install java, see [below](#java).
+
 3. Type this into the console by the `reqT>` prompt and press enter:
 
         println("Hello reqT!") 
         
-4. Then try out the "hello world" example Model [here](http://reqt.org/documentation.html#hello)    
+4. Then try out the "Hello reqT" example [here](http://reqt.org/documentation.html#hello)    
         
-If reqT does not start:
+###<a id="java"> If reqT does not start:</a>
 
 * Check if you have Java 1.7.x installed by opening a terminal window (bash, cmd, or powershell etc.) and type this command:
 ```
