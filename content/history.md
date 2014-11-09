@@ -5,7 +5,20 @@ status=published
 ~~~~~~
 The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund University</a> by Prof. <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>, to provide a free tool for illustrating essential requirements engineering concepts in software engineering teaching of MSc students. Since then reqT has grown into a comprehensive requirements engineering workbench and laboratory for capturing requirements modelling ideas based on experiences from practice and results from research.  
 
-####[Version 3.0.0](http://reqt.org/reqT-v3.0.0.jar) <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a> 
+####[Version 3.0.1](http://reqt.org/reqT-v3.0.1.jar) <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a> 
+
+2014-11-02: **Release 3.0.1**
+
+* Improve graph generation and export including pdf, svg, png
+* Add more graph layout managers in graph export
+* Add html export including element type coloring and css
+* Add latex export 
+* Improve gui including example templates
+* Improve iterators
+* Add transform iterator
+* Several bug fixes
+
+####[Version 3.0.0](http://reqt.org/reqT-v3.0.0.jar)
 
 2014-09-07: **Release 3.0.0**
 

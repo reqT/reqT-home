@@ -7,7 +7,8 @@ status=published
 ReqT is open source under the BSD 2-clause license:
 http://opensource.org/licenses/bsd-license.php
 
-Copyright (c) 2011-2013 Lund University, Sweden. All rights reserved.
+Copyright (c) 2011-2013 Bjorn Regnell, Lund University, Sweden. 
+All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
