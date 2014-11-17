@@ -5,13 +5,14 @@ status=published
 ~~~~~~
 ## Contents
 
-* <a href="#hello"> Hello reqT </a>
-* <a href="#intro"> Introduction to reqT</a>
-* <a href="https://github.com/reqT/reqT/blob/3.0.x/doc/lab1/lab1.pdf?raw=true"> Tutorial (pdf)</a>
-* <a href="metamodel.html"> The reqT metamodel </a>
-* <a href="#pub"> Publications and presentations </a>
-* <a href="#diff"> Differences between reqT v3 and v2 </a>
-* <a href="#old"> Old documentation for reqT v2 </a>
+* <a href="#hello">Hello reqT</a>
+* <a href="#intro">Introduction to reqT</a>
+* <a href="https://github.com/reqT/reqT/raw/3.0.x/doc/lab1/lab1.pdf"> Tutorial (pdf)</a>
+* <a href="metamodel.html">The reqT metamodel</a>
+* <a href="reqT-cheat-sheet.pdf">reqT Cheat Sheet (pdf)</a>
+* <a href="#pub">Publications and presentations</a>
+* <a href="#diff">Differences between reqT v3 and v2</a>
+* <a href="#old">Old documentation for reqT v2</a>
 
 <hr/>
 

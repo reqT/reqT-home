@@ -5,6 +5,7 @@ status=published
 ~~~~~~
 ## Contents
 
+* <a href="reqT-cheat-sheet.pdf">reqT Cheat Sheet (pdf)</a>
 * <a href="#ents"> Entity types </a>
 * <a href="#attrs"> Attribute types </a>
 * <a href="#rels"> Relation types </a>
