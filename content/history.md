@@ -5,7 +5,20 @@ status=published
 ~~~~~~
 The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund University</a> by Prof. <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>, to provide a free tool for illustrating essential requirements engineering concepts in software engineering teaching of MSc students. Since then reqT has grown into a comprehensive requirements engineering workbench and laboratory for capturing requirements modelling ideas based on experiences from practice and results from research.  
 
-####[Version 3.0.1](http://reqt.org/reqT-v3.0.1.jar) <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a> 
+<a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a> 
+
+### Recent releases
+
+Recent releases are published at [github.com/reqT/reqT/releases](https://github.com/reqT/reqT/releases) 
+
+* Release [3.1.2](http://reqt.org/reqT-v3.1.2.jar) add high dpi support
+* Release [3.1.1](http://reqt.org/reqT-v3.1.1.jar) add server mode
+* Release 3.1.0: Update scala version 2.11.11
+* Release 3.0.2: update docs
+
+### Older versions
+
+####[Version 3.0.1](http://reqt.org/reqT-v3.0.1.jar) 
 
 2014-11-02: **Release 3.0.1**
 
@@ -38,7 +51,7 @@ The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund Un
 * Rebuild from scratch
 * Many new features (see notes on release 3.0.0 above)
 
-## Old versions <a href="http://reqt.org/old-site/" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-remove"></span> Visit old site </a> 
+### Even older versions <a href="http://reqt.org/old-site/" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-remove"></span> Visit old site </a> 
 
 #### [Version 2.3](http://reqt.org/reqT-v2.3.jar) 
 2014-01-26: *Constraint solving, hierarchy and variability*

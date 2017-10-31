@@ -1,5 +1,5 @@
 title=reqT License
-date=2014-08-01
+date=2017-10-31
 type=page
 status=published
 ~~~~~~
@@ -7,7 +7,7 @@ status=published
 ReqT is open source under the BSD 2-clause license:
 http://opensource.org/licenses/bsd-license.php
 
-Copyright (c) 2011-2013 Bjorn Regnell, Lund University, Sweden. 
+Copyright (c) 2011-2017 Bjorn Regnell, Lund University, Sweden. 
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
