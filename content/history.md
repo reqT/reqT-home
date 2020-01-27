@@ -11,9 +11,11 @@ The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund Un
 
 Recent releases are published at [github.com/reqT/reqT/releases](https://github.com/reqT/reqT/releases) 
 
+* Release [3.1.4](http://reqt.org/reqT-v3.1.4.jar) update templates
+* Release [3.1.3](http://reqt.org/reqT-v3.1.3.jar) move to Scala 2.12
 * Release [3.1.2](http://reqt.org/reqT-v3.1.2.jar) add high dpi support
 * Release [3.1.1](http://reqt.org/reqT-v3.1.1.jar) add server mode
-* Release 3.1.0: Update scala version 2.11.11
+* Release 3.1.0: bump to Scala 2.11.11
 * Release 3.0.2: update docs
 
 ### Older versions
