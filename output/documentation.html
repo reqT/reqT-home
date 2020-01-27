@@ -64,64 +64,128 @@
 
 	<div class="page-max-width"><h2>Contents</h2>
 <ul>
-  <li><a href="#hello">Hello reqT</a></li>
-  <li><a href="#intro">Introduction to reqT</a></li>
-  <li><a href="https://github.com/reqT/reqT/raw/3.0.x/doc/lab1/lab1.pdf"> Tutorial (pdf)</a></li>
-  <li><a href="metamodel.html">The reqT metamodel</a></li>
-  <li><a href="reqT-cheat-sheet.pdf">reqT Cheat Sheet (pdf)</a></li>
-  <li><a href="#pub">Publications and presentations</a></li>
-  <li><a href="#diff">Differences between reqT v3 and v2</a></li>
-  <li><a href="#old">Old documentation for reqT v2</a></li>
+<li><a href="#hello">Hello reqT</a></li>
+<li><a href="#intro">Introduction to reqT</a></li>
+<li><a href="https://github.com/reqT/reqT/raw/3.0.x/doc/lab1/lab1.pdf"> Tutorial (pdf)</a></li>
+<li><a href="metamodel.html">The reqT metamodel</a></li>
+<li><a href="reqT-cheat-sheet.pdf">reqT Cheat Sheet (pdf)</a></li>
+<li><a href="#pub">Publications and presentations</a></li>
+<li><a href="#diff">Differences between reqT v3 and v2</a></li>
+<li><a href="#old">Old documentation for reqT v2</a></li>
 </ul>
-<hr/><h2><a id="hello"> Hello reqT </a></h2>
+<hr/>
+<h2><a id="hello"> Hello reqT </a></h2>
 <ul>
-  <li><a href="download.html">Download</a> reqT and start the reqT console with this command: <code>java -jar reqT.jar</code></li>
-  <li><p>Type this into the reqT console (or copy-paste it using Ctrl+C and right click):</p>
-  <pre><code>val m = Model(Feature(&quot;hi&quot;) has (Spec(&quot;hello world&quot;), Prio(1))) 
-</code></pre></li>
-  <li><p>Type this to edit the model: </p>
-  <pre><code>edit(m)
-</code></pre></li>
+<li><a href="download.html">Download</a> reqT and start the reqT console with this command: <code>java -jar reqT.jar</code></li>
+<li>Type this into the reqT console (or copy-paste it using Ctrl+C and right click):
+<pre><code>val m = Model(Feature(&quot;hi&quot;) has (Spec(&quot;hello world&quot;), Prio(1))) 
+</code></pre>
+</li>
+<li>
+<p>Type this to edit the model:</p>
+<pre><code>edit(m)
+</code></pre>
+</li>
 </ul>
-<hr/><h2><a id="intro"> Introduction to reqT </a></h2><p>reqT is a scalable requirements modelling tool. With reqT you can create, edit, analyse and visualize requirements, ranging from very small models containing only a few sketchy elements to very large models with thousands of requirements. </p><p>In reqT, requirements are represented in a textual language that enables you to, for example, paste models into emails, version-control your models using git or svn, store your models at GitHub or Bitbucket, and other things you normally do with code. </p><h3>Creating reqT models</h3><p>A reqT <code>Model</code> contains a sequence of elements. Elements can be one of the following three types: </p>
+<hr/>        
+<h2><a id="intro"> Introduction to reqT </a></h2>
+<p>reqT is a scalable requirements modelling tool. With reqT you can create, edit, analyse and visualize requirements, ranging from very small models containing only a few sketchy elements to very large models with thousands of requirements.</p>
+<p>In reqT, requirements are represented in a textual language that enables you to, for example, paste models into emails, version-control your models using git or svn, store your models at GitHub or Bitbucket, and other things you normally do with code.</p>
+<h3>Creating reqT models</h3>
+<p>A reqT <code>Model</code> contains a sequence of elements. Elements can be one of the following three types:</p>
 <ul>
-  <li>entities, such as <code>Feature(&quot;x&quot;)</code> or <code>Stakeholder(&quot;a&quot;)</code></li>
-  <li>attributes, such as <code>Prio(1)</code> or <code>Spec(&quot;Hello reqT!&quot;)</code></li>
-  <li>relations, such as <code>Feature(&quot;x&quot;) has Prio(1)</code> or <code>Feature(&quot;x&quot;) requires Feature(&quot;y&quot;)</code></li>
-</ul><p>Here is an example of a model that expresses different feature benefits according to two different stakeholders:</p><p><iframe src="code/model-benefit.html" style="border-style:none; width:800px; height: 200px;"><pre class="prettyprint"><code class="lang-scala">Model(<br/> Stakeholder("Ada") has (<br/> Feature("export") has Benefit(4),<br/> Feature("print") has Benefit(1),<br/> Feature("upload") has Benefit(2)),<br/> Stakeholder("Charles") has (<br/> Feature("export") has Benefit(2),<br/> Feature("print") has Benefit(1),<br/> Feature("upload") has Benefit(1)))<br/></code></pre></iframe> </p><p>There are many different types of entities, attributes and relations, as listed <a href="metamodel.html">here</a>. You can use any combination of the available entities, attributes and relations as long as you follow these rules: </p>
-<ul>
-  <li>An entity must have an id, e.g. <code>Feature(&quot;myId&quot;)</code>.</li>
-  <li>An attribute must have a value of a specific type.
-  <ul>
-    <li>String attributes must have a string, e.g. <code>Spec(&quot;My detailed specification&quot;)</code> or <code>Gist(&quot;My short description.&quot;)</code>.</li>
-    <li>Int attributes must have an integer, e.g. <code>Prio(1)</code> or <code>Max(100)</code>.</li>
-  </ul></li>
-  <li>A relation must connect and entity with an element or a sequence of elements within parenthesis via a link of some relation type, e.g. the relation <code>Feature(&quot;x&quot;) has Prio(1)</code> connects a <code>Feature</code> entity with id "x" to a <code>Prio</code> attribute via a link of type <code>has</code>.</li>
-</ul><h3>The reqT Scala-embedded DSL</h3><p>A requirements model in reqT is represented by a language that is embedded in <a href="http://en.wikipedia.org/wiki/Scala_%28programming_language%29">Scala</a>, a so called internal or embedded Domain-Specific Language <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a>. This means that your models are represented using Scala classes in an efficient data structure that can be manipulated using concise and powerful Scala scripts.</p><p>The Scala class hierarchy of the Elem, Node, Relation, Attribute and Entity classes are shown below.</p><p><img src="img/metamodel-simple.svg" alt="Elem class diagram"/> </p><p>Elem is the superclass of Node and Relation. A Node can be either an Attribute or an Entity. A Relation has three value fields: entity, link and tail. The tail of a relation is a new Model that recursively can contain zero or more objects of type Elem.</p><p>You can check out the different available elements of the reqT metamodel <a href="http://reqt.org/metamodel.html">here</a>.</p><h4>When to use which element of the reqT metamodel?</h4><p>The reqT metamodel gives you a large bag of requirements-related concepts that you can combine freely in many different ways, as long as you follow some basic rules. What is a good or bad requirements model is determined by the context and there is no universal "truth" about the best way to model. However, here is some advice that you may want to follow:</p>
-<ul>
-  <li>Some parts of your requirements model may need to be more elaborated than other parts, as your requirements may be more or less risky to be badly implemented downstream.</li>
-  <li>If you work on modelling intentions (goals) and attach rationale (why) to your models, the risk for bad implementation is often reduced. Use the <code>Goal</code> entity and/or the <code>Why</code> attribute in your reqT models.</li>
-  <li>If you include examples in combination with intention and rationale, it is more likely that your models will be interpreted in a relevant way in downstream development. You can use the <code>Example</code> attribute, as shown in the model below with a feature that includes information on both goal (why), a product level specification, as well as an illustrative example:<br/><iframe src="code/model-why-spec-example.html" style="border-style:none; width:800px; height: 200px;"><pre class="prettyprint"><code class="lang-scala">Model(<br/> Feature("navigate") has (<br/>Why("Measuring neural response is a bit painful to the patient.<br/> Electrodes must be kept in place ...<br/> So both hands should be at the patient during a measurement."),<br/>Spec("It shall be possible to perform the commands start, stop,<br/> ... with both hands at the patient."),<br/>Example("Might be done with mini keyboard (wrist keys), foot pedal,<br/> voice recognition, etc.")<br/> )<br/>)<br/></code></pre></iframe></li>
-</ul><p>After this introduction do the <a href="https://github.com/reqT/reqT/blob/3.0.x/doc/lab1/lab1.pdf?raw=true">reqT Tutorial Lab 1</a> (pdf). </p><p>--- End of Introduction ---<br/><hr/></p><h2><a id="diff"> Differences between reqT v3 and v2 </a></h2><p>Version 3 of reqT is a complete rebuild from scratch and many things have been improved and generalized compared to v2, while some things still remains to be re-implemented (depending on user wishes). This section is intended for those who want to migrate old v2 reqT models, scripts and examples from old documentation to reqT v3.</p><p>The main differences between reqT v3 and v2 are:</p>
-<ul>
-  <li><p><b>Recursive Models</b>. The upper layers of the metamodel is generalized to allow for recursive entity-relation-attribute modelling where models can contain models of arbitrary depth. The old v2 special-case attribute Submodel is dropped and now <em>all</em> relations link to a submodel that recursively can contain attributes, entities and relations to submodels.<br/>Deprecated usage:</p>
-  <pre><code>Model(Stakeholder(&quot;a&quot;) has Submodel(Feature(&quot;x&quot;) has Prio(1))) //this is old reqT v2
-</code></pre><p>Use this instead: </p>
-  <pre><code>Model(Stakeholder(&quot;a&quot;) has (Feature(&quot;x&quot;) has Prio(1)))
-</code></pre></li>
-  <li><p><b>The has relation</b>. In v3 the has relation can connect any element to an entity including entities and relations, not only attributes. Thus the old v2 owns relation is dropped, as you can use the has relation instead in v3. In v2 the has relation is special as it only can link to attributes and the only way to connect attributes to entities in v2 is to use the has relation.<br/>Deprecated usage: </p>
-  <pre><code>Model(Product(&quot;p&quot;) owns Feature(&quot;x&quot;)) //this is old reqT v2
-</code></pre><p>Use this instead: </p>
-  <pre><code>Model(Product(&quot;p&quot;) has Feature(&quot;x&quot;))
-</code></pre></li>
+<li>entities, such as <code>Feature(&quot;x&quot;)</code> or <code>Stakeholder(&quot;a&quot;)</code></li>
+<li>attributes, such as <code>Prio(1)</code> or <code>Spec(&quot;Hello reqT!&quot;)</code></li>
+<li>relations, such as <code>Feature(&quot;x&quot;) has Prio(1)</code> or <code>Feature(&quot;x&quot;) requires Feature(&quot;y&quot;)</code></li>
 </ul>
+<p>Here is an example of a model that expresses different feature benefits according to two different stakeholders:</p>
+<iframe src="code/model-benefit.html" style="border-style:none; width:800px; height: 200px;"><pre class="prettyprint"><code class="lang-scala">Model(
+  Stakeholder("Ada") has (
+    Feature("export") has Benefit(4), 
+    Feature("print") has Benefit(1), 
+    Feature("upload") has Benefit(2)), 
+  Stakeholder("Charles") has (
+    Feature("export") has Benefit(2), 
+    Feature("print") has Benefit(1), 
+    Feature("upload") has Benefit(1)))
+</code></pre></iframe>        
+<p>There are many different types of entities, attributes and relations, as listed <a href="metamodel.html">here</a>. You can use any combination of the available entities, attributes and relations as long as you follow these rules:</p>
 <ul>
-  <li><p><b>New entities, relations and attributes.</b> The metamodel has undergone several changes. You can investigate the new medamodel using the new GUI, which is started using the <code>edit</code> command in the reqT console. In the GUI you can use the Metamodel menu to investigate the available elements.</p></li>
-  <li><p><b>Paths.</b> The forward slash operator / is used in v3 instead of the old bang operator ! to construct paths in a more intuitive way. Paths are also generalized to not just follow the has relation via the old Submodel attribute, but in v3 all paths can include a relation type, e.g. <code>Stakeholder(&quot;a&quot;).requires/Feature(&quot;x&quot;).has/Prio</code> </p></li>
-  <li><p><b>Model operators.</b> The basic add operator + and the concatenate operator ++ works as before, but many of the other operators have been changed, removed or replaced by a named method. The old restrict operator / is now used for path construction. Instead the operator * is used as restrict operator with the semantic of recursively selecting any submodel that contains the right hand selector. You can see the implementation of model separator operators <a href="https://github.com/reqT/reqT/blob/3.0.x/src/reqT/ModelSeparators.scala">here</a> and the implementation of the isMatch operator =*= <a href="https://github.com/reqT/reqT/blob/3.0.x/src/reqT/DSL.scala">here</a>.</p></li>
-  <li><p><b> Implementation using metaprogramming</b>. In v3 the metamodel of reqT is now expressed in reqT itself using the bootstrap entity Meta and the relation superOf. You can see the code of the metamodel <a href="https://github.com/reqT/reqT/blob/3.0.x/src/reqT/meta.scala#L18"> here </a>. The reqT metamodel is used to genrate Scala code that implements the entities, relations and attributes of the reqT DSL using Scala case classes, as seen in the generated code <a href="https://github.com/reqT/reqT/blob/3.0.x/src/reqT/GENERATED-metamodel.scala"> here </a>.</p></li>
+<li>An entity must have an id, e.g. <code>Feature(&quot;myId&quot;)</code>.</li>
+<li>An attribute must have a value of a specific type.
+<ul>
+<li>String attributes must have a string, e.g. <code>Spec(&quot;My detailed specification&quot;)</code> or <code>Gist(&quot;My short description.&quot;)</code>.</li>
+<li>Int attributes must have an integer, e.g. <code>Prio(1)</code> or <code>Max(100)</code>.</li>
 </ul>
-<hr/><h2><a id="pub"> Publications and presentations on reqT v2 </a></h2><p>The documents below explain the background of reqT and give examples of usage in reqT v2. Check out the <a href="#diff"> differences between reqT v3 and reqT v2 </a> before you try the examples in the below documents in reqT v3. If examples does not work it in v3 it is due to limitations in backward compatibility. </p>
+</li>
+<li>A relation must connect and entity with an element or a sequence of elements within parenthesis via a link of some relation type, e.g. the relation <code>Feature(&quot;x&quot;) has Prio(1)</code> connects a <code>Feature</code> entity with id &quot;x&quot; to a <code>Prio</code> attribute via a link of type <code>has</code>.</li>
+</ul>
+<h3>The reqT Scala-embedded DSL</h3>
+<p>A requirements model in reqT is represented by a language that is embedded in <a href="http://en.wikipedia.org/wiki/Scala_%28programming_language%29">Scala</a>, a so called internal or embedded Domain-Specific Language <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a>. This means that your models are represented using Scala classes in an efficient data structure that can be manipulated using concise and powerful Scala scripts.</p>
+<p>The Scala class hierarchy of the Elem, Node, Relation, Attribute and Entity classes are shown below.</p>
+<p><img src="img/metamodel-simple.svg" alt="Elem class diagram"/></p>
+<p>Elem is the superclass of Node and Relation. A Node can be either an Attribute or an Entity. A Relation has three value fields: entity, link and tail. The tail of a relation is a new Model that recursively can contain zero or more objects of type Elem.</p>
+<p>You can check out the different available elements of the reqT metamodel <a href="http://reqt.org/metamodel.html">here</a>.</p>
+<h4>When to use which element of the reqT metamodel?</h4>
+<p>The reqT metamodel gives you a large bag of requirements-related concepts that you can combine freely in many different ways, as long as you follow some basic rules. What is a good or bad requirements model is determined by the context and there is no universal &quot;truth&quot; about the best way to model. However, here is some advice that you may want to follow:</p>
+<ul>
+<li>Some parts of your requirements model may need to be more elaborated than other parts, as your requirements may be more or less risky to be badly implemented downstream.</li>
+<li>If you work on modelling intentions (goals) and attach rationale (why) to your models, the risk for bad implementation is often reduced. Use the <code>Goal</code> entity and/or the <code>Why</code> attribute in your reqT models.</li>
+<li>If you include examples in combination with intention and rationale, it is more likely that your models will be interpreted in a relevant way in downstream development. You can use the <code>Example</code> attribute, as shown in the model below with a feature that includes information on both goal (why), a product level specification, as well as an illustrative example:</li>
+</ul>
+<iframe src="code/model-why-spec-example.html" style="border-style:none; width:800px; height: 200px;"><pre class="prettyprint"><code class="lang-scala">Model(
+  Feature("navigate") has (
+    Why("Measuring neural response is a bit painful to the  patient. 
+         Electrodes must be kept in place ... 
+         So both hands should be at the patient during a measurement."),
+    Spec("It shall be possible to perform the commands start, stop, 
+          ... with both hands at the patient."),
+    Example("Might be done with mini keyboard (wrist keys), foot pedal, 
+            voice recognition, etc.")
+  )
+)
+</code></pre></iframe>   
+<p>After this introduction do the <a href="https://github.com/reqT/reqT/blob/3.0.x/doc/lab1/lab1.pdf?raw=true">reqT Tutorial Lab 1</a> (pdf).</p>
+<p>--- End of Introduction ---<br />
+<hr/></p>
+<h2><a id="diff"> Differences between reqT v3 and v2 </a></h2>
+<p>Version 3 of reqT is a complete rebuild from scratch and many things have been improved and generalized compared to v2, while some things still remains to be re-implemented (depending on user wishes). This section is intended for those who want to migrate old v2 reqT models, scripts and examples from old documentation to reqT v3.</p>
+<p>The main differences between reqT v3 and v2 are:</p>
+<ul>
+<li>
+<p><b>Recursive Models</b>. The upper layers of the metamodel is generalized to allow for recursive entity-relation-attribute modelling where models can contain models of arbitrary depth. The old v2 special-case attribute Submodel is dropped and now <em>all</em> relations link to a submodel that recursively can contain attributes, entities and relations to submodels.<br />
+Deprecated usage:</p>
+<pre><code>Model(Stakeholder(&quot;a&quot;) has Submodel(Feature(&quot;x&quot;) has Prio(1))) //this is old reqT v2
+</code></pre>
+<p>Use this instead:</p>
+<pre><code>Model(Stakeholder(&quot;a&quot;) has (Feature(&quot;x&quot;) has Prio(1)))
+</code></pre>
+</li>
+<li>
+<p><b>The has relation</b>. In v3 the has relation can connect any element to an entity including entities and relations, not only attributes. Thus the old v2 owns relation is dropped, as you can use the has relation instead in v3. In v2 the has relation is special as it only can link to attributes and the only way to connect attributes to entities in v2 is to use the has relation.<br />
+Deprecated usage:</p>
+<pre><code>Model(Product(&quot;p&quot;) owns Feature(&quot;x&quot;)) //this is old reqT v2
+</code></pre>
+<p>Use this instead:</p>
+<pre><code>Model(Product(&quot;p&quot;) has Feature(&quot;x&quot;))
+</code></pre>
+</li>
+<li>
+<p><b>New entities, relations and attributes.</b> The metamodel has undergone several changes. You can investigate the new medamodel using the new GUI, which is started using the <code>edit</code> command in the reqT console. In the GUI you can use the Metamodel menu to investigate the available elements.</p>
+</li>
+<li>
+<p><b>Paths.</b> The forward slash operator / is used in v3 instead of the old bang operator ! to construct paths in a more intuitive way. Paths are also generalized to not just follow the has relation via the old Submodel attribute, but in v3 all paths can include a relation type, e.g. <code>Stakeholder(&quot;a&quot;).requires/Feature(&quot;x&quot;).has/Prio</code></p>
+</li>
+<li>
+<p><b>Model operators.</b> The basic add operator + and the concatenate operator ++ works as before, but many of the other operators have been changed, removed or replaced by a named method. The old restrict operator / is now used for path construction. Instead the operator * is used as restrict operator with the semantic of recursively selecting any submodel that contains the right hand selector. You can see the implementation of model separator operators <a href="https://github.com/reqT/reqT/blob/3.0.x/src/reqT/ModelSeparators.scala">here</a> and the implementation of the isMatch operator =*= <a href="https://github.com/reqT/reqT/blob/3.0.x/src/reqT/DSL.scala">here</a>.</p>
+</li>
+<li>
+<p><b> Implementation using metaprogramming</b>. In v3 the metamodel of reqT is now expressed in reqT itself using the bootstrap entity Meta and the relation superOf. You can see the code of the metamodel <a href="https://github.com/reqT/reqT/blob/3.0.x/src/reqT/meta.scala#L18"> here </a>. The reqT metamodel is used to genrate Scala code that implements the entities, relations and attributes of the reqT DSL using Scala case classes, as seen in the generated code <a href="https://github.com/reqT/reqT/blob/3.0.x/src/reqT/GENERATED-metamodel.scala"> here </a>.</p>
+</li>
+</ul>
+<hr/>
+<h2><a id="pub"> Publications and presentations on reqT v2 </a></h2>
+<p>The documents below explain the background of reqT and give examples of usage in reqT v2. Check out the <a href="#diff"> differences between reqT v3 and reqT v2 </a> before you try the examples in the below documents in reqT v3. If examples does not work it in v3 it is due to limitations in backward compatibility.</p>
 <table>
 <tr>
 <td>reqT.org &ndash; Towards a Semi-Formal, Open and Scalable Requirements Modeling Tool</td>
@@ -135,7 +199,15 @@
 <td>reqT.org &ndash; A Scala DSL for Constraint-based Requirement Engineering using JaCoP</td><td> 
 <a href="http://reqt.org/reqT-sweconsnet2013.pdf" class="btn btn-success"><span class="glyphicon glyphicon-cloud-download"></span> Presentation pdf </a> </td>
 <td><a href="http://www.lth.se/index.php?id=70383" class="btn btn-info"><span class="glyphicon glyphicon-link"></span> SweConsNet2013 </a> </td>
-</tr></table><h2><a id="old"> Old reqT v2 documents </a></h2><p>The documents below explain the background of reqT and give examples of usage in reqT v2. Check out the <a href="#diff"> differences between reqT v3 and reqT v2 </a> before you try the examples in the below documents in reqT v3. If an example does not work in v3, it is due to limitations in backward compatibility. </p><p><a href="http://reqt.org/reqT-intro.pdf">Old introduction to reqT v2</a> </p><p><a href="http://reqt.org/reqT-manual.pdf">reqT v2 manual draft version 0.1</a> </p><p><a href="http://reqt.org/metamodel.png">reqT v2 metamodel</a> </p><p><a href="http://reqt.org/reqT-status.pdf">reqT status promotion ladder</a> </p><p><a href="http://reqt.org/reqT.css">reqT.css file for generated web documents</a> </p></div>
+</tr></table>
+<h2><a id="old"> Old reqT v2 documents </a></h2>
+<p>The documents below explain the background of reqT and give examples of usage in reqT v2. Check out the <a href="#diff"> differences between reqT v3 and reqT v2 </a> before you try the examples in the below documents in reqT v3. If an example does not work in v3, it is due to limitations in backward compatibility.</p>
+<p><a href="http://reqt.org/reqT-intro.pdf">Old introduction to reqT v2</a></p>
+<p><a href="http://reqt.org/reqT-manual.pdf">reqT v2 manual draft version 0.1</a></p>
+<p><a href="http://reqt.org/metamodel.png">reqT v2 metamodel</a></p>
+<p><a href="http://reqt.org/reqT-status.pdf">reqT status promotion ladder</a></p>
+<p><a href="http://reqt.org/reqT.css">reqT.css file for generated web documents</a></p>
+</div>
 
 	<hr />
 

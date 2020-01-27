@@ -62,27 +62,69 @@
 		<h1>reqT Download</h1>
 	</div>
 
-	<div class="page-max-width"><p><a href="http://reqt.org/reqT.jar" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download reqT.jar </a> 30MB v3.1.x-SNAPSHOT latest stable <a href="history.html">all versions</a></p><h3><a id="how-to-run">How to run reqT:</a></h3>
+	<div class="page-max-width"><p><a href="http://reqt.org/reqT.jar" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download reqT.jar </a>  30MB v3.1.x-SNAPSHOT latest stable <a href="history.html">all versions</a></p>
+<h3><a id="how-to-run">How to run reqT:</a></h3>
 <ol>
-  <li>Download the reqT.jar above and save it in some directory</li>
-  <li>Open a terminal, navigate to that directory and type:<br/><code>
-java -jar reqT.jar
-</code><br/>The above requires java. To check and install java, see <a href="#java">below</a>.</li>
-  <li><p>Type this into the console by the <code>reqT&gt;</code> prompt and press enter:</p>
-  <pre><code>println(&quot;Hello reqT!&quot;) 
-</code></pre></li>
-  <li><p>Then try out the "Hello reqT" example <a href="http://reqt.org/documentation.html#hello">here</a> </p></li>
-</ol><h3><a id="java"> If reqT does not start:</a></h3>
+<li>
+<p>Download the reqT.jar above and save it in some directory</p>
+</li>
+<li>
+<p>Open a terminal, navigate to that directory and type this in terminal:</p>
+<pre><code>java -jar reqT.jar
+</code></pre>
+<p>This requires java. To check and install java, see <a href="#java">below</a>. If you have java installed you will see a message similar to this:</p>
+<pre><code>** Welcome to reqT version 3.1.4
+** Snapshot build number: 566
+** Scala version 2.12.8
+** Java  version 1.8.0_232 OpenJDK 64-Bit Server VM
+
+**                  _______
+**                 |__   __|
+**   _ __  ___   __ _ | |      reqT - a requirements engineering tool
+**  |  __|/ _ \ / _  || |      http://reqT.org
+**  | |  |  __/| (_| || |      (c) 2010-2019, Lund University
+**  |_|   \___| \__  ||_|      Open Source BSD-2-clause license
+**                 | |
+**                 |_|
+
+** Type  edit      to start model editor gui
+** Type  :help     for help on the Scala interpreter
+** Type  :pa       to enter paste mode
+** Type  :q        to exit when all sub-threads are done
+** Type  sys.exit  to exit and terminate all threads
+** Type  Feature?  to get help on a concept, e.g. Feature
+
+reqT&gt; 
+</code></pre>
+</li>
+<li>
+<p>Type this into the console by the <code>reqT&gt;</code> prompt and press enter:</p>
+<pre><code>println(&quot;Hello reqT!&quot;) 
+</code></pre>
+</li>
+<li>
+<p>Then try out the &quot;Hello reqT&quot; example <a href="http://reqt.org/documentation.html#hello">here</a></p>
+</li>
+</ol>
+<h3><a id="java"> If reqT does not start:</a></h3>
 <ul>
-  <li><p>Check if you have Java 1.8.x installed by opening a terminal window (bash, cmd, or powershell etc.) and type this command:<br/><code>
-java -version 
-</code><br/> This should print something similar to<br/> <code>java version &quot;1.8.0_151&quot;</code></p></li>
-  <li><p>If the above step failed then install Java 1.8 from here: </p>
-  <ul>
-    <li><a href="http://www.oracle.com/technetwork/java/javase/downloads">Windows/Mac: scroll down to Java SE8</a></li>
-    <li><a href="http://openjdk.java.net/install/index.html">linux install openjdk-8</a></li>
-  </ul></li>
-</ul></div>
+<li>
+<p>Check if you have Java 1.8.x installed by opening a terminal window (bash, cmd, or powershell etc.) and type this command:</p>
+<pre><code>java -version 
+</code></pre>
+<p>This should print something similar to</p>
+<pre><code>java version &quot;1.8.0_232&quot;
+</code></pre>
+</li>
+<li>
+<p>If the above step failed then install Java 1.8 from here:</p>
+<ul>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads">Windows/Mac: scroll down to Java SE8</a></li>
+<li><a href="http://openjdk.java.net/install/index.html">linux install openjdk-8</a></li>
+</ul>
+</li>
+</ul>
+</div>
 
 	<hr />
 

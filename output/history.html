@@ -62,106 +62,151 @@
 		<h1>reqT History</h1>
 	</div>
 
-	<div class="page-max-width"><p>The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund University</a> by Prof. <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>, to provide a free tool for illustrating essential requirements engineering concepts in software engineering teaching of MSc students. Since then reqT has grown into a comprehensive requirements engineering workbench and laboratory for capturing requirements modelling ideas based on experiences from practice and results from research. </p><p><a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a> </p><h3>Recent releases</h3><p>Recent releases are published at <a href="https://github.com/reqT/reqT/releases">github.com/reqT/reqT/releases</a> </p>
+	<div class="page-max-width"><p>The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund University</a> by Prof. <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>, to provide a free tool for illustrating essential requirements engineering concepts in software engineering teaching of MSc students. Since then reqT has grown into a comprehensive requirements engineering workbench and laboratory for capturing requirements modelling ideas based on experiences from practice and results from research.</p>
+<p><a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a></p>
+<h3>Recent releases</h3>
+<p>Recent releases are published at <a href="https://github.com/reqT/reqT/releases">github.com/reqT/reqT/releases</a></p>
 <ul>
-  <li>Release <a href="http://reqt.org/reqT-v3.1.2.jar">3.1.2</a> add high dpi support</li>
-  <li>Release <a href="http://reqt.org/reqT-v3.1.1.jar">3.1.1</a> add server mode</li>
-  <li>Release 3.1.0: Update scala version 2.11.11</li>
-  <li>Release 3.0.2: update docs</li>
-</ul><h3>Older versions</h3><h4><a href="http://reqt.org/reqT-v3.0.1.jar">Version 3.0.1</a></h4><p>2014-11-02: <strong>Release 3.0.1</strong></p>
-<ul>
-  <li>Improve graph generation and export including pdf, svg, png</li>
-  <li>Add more graph layout managers in graph export</li>
-  <li>Add html export including element type coloring and css</li>
-  <li>Add latex export</li>
-  <li>Improve gui including example templates</li>
-  <li>Improve iterators</li>
-  <li>Add transform iterator</li>
-  <li>Several bug fixes</li>
-</ul><h4><a href="http://reqt.org/reqT-v3.0.0.jar">Version 3.0.0</a></h4><p>2014-09-07: <strong>Release 3.0.0</strong></p>
-<ul>
-  <li>Graphical user interface with foldable tree view and syntax-colored text editor</li>
-  <li>Fully recursive modelling allowing models inside models at arbitrary depth</li>
-  <li>New powerful Scala-embedded DSL and more comprehensive metamodel</li>
-  <li>Metamodel-aware auto-completion in text editor</li>
-  <li>Export to graphviz, html, spreadsheet and more</li>
-  <li>New external DSL called <em>reqtext</em> using indentation instead of parenthesis</li>
-  <li>Meta-programming-enabled metamodel customization</li>
-  <li>All required libs are included in a self-contained jar-file - no need to install Scala</li>
-</ul><h4><a href="http://reqt.org/reqT-v3.0.0-RC1.jar">Version 3.0.0-RC1</a></h4><p>2014-08-01: Release Candidate 1 of version 3.0.0</p>
-<ul>
-  <li>Rebuild from scratch</li>
-  <li>Many new features (see notes on release 3.0.0 above)</li>
-</ul><h3>Even older versions <a href="http://reqt.org/old-site/" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-remove"></span> Visit old site </a></h3><h4><a href="http://reqt.org/reqT-v2.3.jar">Version 2.3</a></h4><p>2014-01-26: <em>Constraint solving, hierarchy and variability</em></p>
-<ul>
-  <li>Add constraint solving by integration with JaCoP</li>
-  <li>Add TestCase and Code and make runnable in REPL</li>
-  <li>Add hierarchical model attribute and flattening of Submodel</li>
-  <li>Add a first prototype of variability modelling</li>
-</ul><h4><a href="http://reqt.org/reqT-v2.2.jar">Version 2.2</a></h4><p>2012-11-29: <em>Improvements based on user requests</em></p>
-<ul>
-  <li>Restrict on sets of entities, e.g.: <code>m / (m / Label(&quot;aa&quot;)).sources</code></li>
-  <li>File proxy attribute External to load strings externally in toHtml, e.g.:<br/> <code>Feature(&quot;x&quot;) has (Gist(&quot;g&quot;), External(&quot;myspecstring.txt&quot;,Spec.apply))</code></li>
-  <li>Escape sequence convertion from escape chars in toScala</li>
-  <li>Newline <code>\n</code> in Attribute values is replaced with <code>&lt;br&gt;</code> in HTML-generation</li>
-  <li>Cancelled bad code causing long execution times for large owns-structures</li>
-  <li><code>m up Feature(&quot;x&quot;) == (m / Feature(&quot;x&quot;).up ++ (m \ Feature(&quot;x&quot;))</code></li>
-  <li><code>m down Feature(&quot;x&quot;) == (m / Feature(&quot;x&quot;).down ++ (m \ Feature(&quot;x&quot;))</code></li>
-  <li>Semantic check of owns-relations: <code>m.hasMultiOwners, m.multiOwners</code></li>
-  <li>Semantic check of missing Specs: <code>m.hasMissingSpecs, m.missingSpecs</code></li>
-  <li>Ordering of Status and Level: <code>Status(DROPPED) &lt; STATUS(ELICITED)</code></li>
-  <li>Check to run all (currently 2) available checks: <code>m.check</code></li>
-</ul><h4><a href="http://reqt.org/reqT-v2.1.jar">Version 2.1</a></h4><p>2012-11-12: <em>Minor fixes + improved restrict operator</em></p>
-<ul>
-  <li>you can now restrict models to general strings:</li>
+<li>Release <a href="http://reqt.org/reqT-v3.1.4.jar">3.1.4</a> update templates</li>
+<li>Release <a href="http://reqt.org/reqT-v3.1.3.jar">3.1.3</a> move to Scala 2.12</li>
+<li>Release <a href="http://reqt.org/reqT-v3.1.2.jar">3.1.2</a> add high dpi support</li>
+<li>Release <a href="http://reqt.org/reqT-v3.1.1.jar">3.1.1</a> add server mode</li>
+<li>Release 3.1.0: bump to Scala 2.11.11</li>
+<li>Release 3.0.2: update docs</li>
 </ul>
-<pre><code>m / &quot;&lt;find source entities containing this string&gt;&quot;
-m /+ &quot;&lt;find this string anywhere&gt;&quot;
-m /-&gt; &quot;&lt;find destination entities containing this string&gt;&quot;
-ls     //list files in user.dir
-dir    // same as ls
-</code></pre>
+<h3>Older versions</h3>
+<h4><a href="http://reqt.org/reqT-v3.0.1.jar">Version 3.0.1</a></h4>
+<p>2014-11-02: <strong>Release 3.0.1</strong></p>
 <ul>
-  <li>Bug-fix on printing quotes in assigns:<br/> <code>Model(Class(&quot;Guest&quot;) assigns(Label(&quot;one-to-many&quot;)) to Class(&quot;Stay&quot;))</code></li>
-</ul><h4><a href="http://reqt.org/reqT-v2.0.jar">Version 2.0</a></h4><p>2012-10-21: <em>Major update and refactoring</em></p>
+<li>Improve graph generation and export including pdf, svg, png</li>
+<li>Add more graph layout managers in graph export</li>
+<li>Add html export including element type coloring and css</li>
+<li>Add latex export</li>
+<li>Improve gui including example templates</li>
+<li>Improve iterators</li>
+<li>Add transform iterator</li>
+<li>Several bug fixes</li>
+</ul>
+<h4><a href="http://reqt.org/reqT-v3.0.0.jar">Version 3.0.0</a></h4>
+<p>2014-09-07: <strong>Release 3.0.0</strong></p>
 <ul>
-  <li>improved DSL with increased flexibility and applicability</li>
-  <li>tight integration with Scala collections</li>
-  <li>added document templates for flexible chapter control</li>
-  <li>document generation focus on web instead of Latex</li>
-  <li>type structure revised from scratch</li>
-  <li>the data model is given a graph-like strukture</li>
-  <li>relations are now generalized, and attributes have a "has"-edge</li>
-  <li>A bit more idiomatic Scala</li>
-  <li>...</li>
-  <li>TODO Still to be backported: latex generation; but Html was more important</li>
-</ul><h4><a href="http://reqt.org/reqTv1.4.jar">Version 1.4</a></h4><p>2011-11-26: <em>prioOrder, custom chapter order by prio</em><br/> * added operation prioOrder on domains:</p>
+<li>Graphical user interface with foldable tree view and syntax-colored text editor</li>
+<li>Fully recursive modelling allowing models inside models at arbitrary depth</li>
+<li>New powerful Scala-embedded DSL and more comprehensive metamodel</li>
+<li>Metamodel-aware auto-completion in text editor</li>
+<li>Export to graphviz, html, spreadsheet  and more</li>
+<li>New external DSL called <em>reqtext</em> using indentation instead of parenthesis</li>
+<li>Meta-programming-enabled metamodel customization</li>
+<li>All required libs are included in a self-contained jar-file - no need to install Scala</li>
+</ul>
+<h4><a href="http://reqt.org/reqT-v3.0.0-RC1.jar">Version 3.0.0-RC1</a></h4>
+<p>2014-08-01: Release Candidate 1 of version 3.0.0</p>
+<ul>
+<li>Rebuild from scratch</li>
+<li>Many new features (see notes on release 3.0.0 above)</li>
+</ul>
+<h3>Even older versions <a href="http://reqt.org/old-site/" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-remove"></span> Visit old site </a></h3>
+<h4><a href="http://reqt.org/reqT-v2.3.jar">Version 2.3</a></h4>
+<p>2014-01-26: <em>Constraint solving, hierarchy and variability</em></p>
+<ul>
+<li>Add constraint solving by integration with JaCoP</li>
+<li>Add TestCase and Code and make runnable in REPL</li>
+<li>Add hierarchical model attribute and flattening of Submodel</li>
+<li>Add a first prototype of variability modelling</li>
+</ul>
+<h4><a href="http://reqt.org/reqT-v2.2.jar">Version 2.2</a></h4>
+<p>2012-11-29: <em>Improvements based on user requests</em></p>
+<ul>
+<li>Restrict on sets of entities, e.g.: <code>m / (m / Label(&quot;aa&quot;)).sources</code></li>
+<li>File proxy attribute External to load strings externally in toHtml, e.g.:<br />
+<code>Feature(&quot;x&quot;) has (Gist(&quot;g&quot;), External(&quot;myspecstring.txt&quot;,Spec.apply))</code></li>
+<li>Escape sequence convertion from escape chars in toScala</li>
+<li>Newline <code>\n</code> in Attribute values is replaced with <code>&lt;br&gt;</code> in HTML-generation</li>
+<li>Cancelled bad code causing long execution times for large owns-structures</li>
+<li><code>m up Feature(&quot;x&quot;) == (m / Feature(&quot;x&quot;).up ++ (m \ Feature(&quot;x&quot;))</code></li>
+<li><code>m down Feature(&quot;x&quot;) == (m / Feature(&quot;x&quot;).down ++ (m \ Feature(&quot;x&quot;))</code></li>
+<li>Semantic check of owns-relations: <code>m.hasMultiOwners, m.multiOwners</code></li>
+<li>Semantic check of missing Specs: <code>m.hasMissingSpecs, m.missingSpecs</code></li>
+<li>Ordering of Status and Level: <code>Status(DROPPED) &lt; STATUS(ELICITED)</code></li>
+<li>Check to run all (currently 2) available checks: <code>m.check</code></li>
+</ul>
+<h4><a href="http://reqt.org/reqT-v2.1.jar">Version 2.1</a></h4>
+<p>2012-11-12: <em>Minor fixes + improved restrict operator</em></p>
+<ul>
+<li>
+<p>you can now restrict models to general strings:</p>
+<p>m / &quot;<find source entities containing this string>&quot;<br />
+m /+ &quot;<find this string anywhere>&quot;<br />
+m /-&gt; &quot;<find destination entities containing this string>&quot;<br />
+ls     //list files in user.dir<br />
+dir    // same as ls</p>
+</li>
+<li>
+<p>Bug-fix on printing quotes in assigns:<br />
+<code>Model(Class(&quot;Guest&quot;) assigns(Label(&quot;one-to-many&quot;)) to Class(&quot;Stay&quot;))</code></p>
+</li>
+</ul>
+<h4><a href="http://reqt.org/reqT-v2.0.jar">Version 2.0</a></h4>
+<p>2012-10-21: <em>Major update and refactoring</em></p>
+<ul>
+<li>improved DSL with increased flexibility and applicability</li>
+<li>tight integration with Scala collections</li>
+<li>added document templates for flexible chapter control</li>
+<li>document generation focus on web instead of Latex</li>
+<li>type structure revised from scratch</li>
+<li>the data model is given a graph-like strukture</li>
+<li>relations are now generalized, and attributes have a &quot;has&quot;-edge</li>
+<li>A bit more idiomatic Scala</li>
+<li>...</li>
+<li>TODO Still to be backported: latex generation; but Html was more important</li>
+</ul>
+<h4><a href="http://reqt.org/reqTv1.4.jar">Version 1.4</a></h4>
+<p>2011-11-26: <em>prioOrder, custom chapter order by prio</em><br />
+* added operation prioOrder on domains:</p>
 <pre><code> &gt;   var d = Domain(feature(&quot;1&quot;, prio -&gt; 2),feature(&quot;2&quot;,prio -&gt; 1))
  &gt;   d.prioOrder
  res3: List[reqT.Ent] = List(Ent(feature,2), Ent(feature,1))
 </code></pre>
 <ul>
-  <li>chapter ordered based on chapter prio:<br/> <code>d += chapter(&quot;x&quot;, text -&gt; &quot;my text&quot;, prio -&gt; 3)</code></li>
-  <li>will place chapter("x") after all chapters with prio less than 3 and before all chapters with prio more than 3.</li>
-  <li>No prio is interpreted as <code>prio -&gt; Int.MaxValue</code></li>
-</ul><h4><a href="http://reqt.org/reqTv1.3.jar">Version 1.3</a></h4><p>2011-11-26: <em>Custom chapters, changeAll with implicit deprecation</em></p>
+<li>chapter ordered based on chapter prio:<br />
+<code>d += chapter(&quot;x&quot;, text -&gt; &quot;my text&quot;, prio -&gt; 3)</code></li>
+<li>will place chapter(&quot;x&quot;) after all chapters with prio less than 3 and before all chapters with prio more than 3.</li>
+<li>No prio is interpreted as <code>prio -&gt; Int.MaxValue</code></li>
+</ul>
+<h4><a href="http://reqt.org/reqTv1.3.jar">Version 1.3</a></h4>
+<p>2011-11-26: <em>Custom chapters, changeAll with implicit deprecation</em></p>
 <ul>
-  <li>added entity chapter for latex chapter generation:<br/>d += chapter("My Chap", text -&gt; "some text")<br/> d += chapter("My Chap") has (feature("x"),feature("y"))</li>
-  <li>added changeAll to tranform an entity and make old key deprecated:<br/>d **= feature("x") -&gt; goal("x1")<br/> // this will implicitly add a relation goal("x1") was feature("x")<br/> // and also change feature("x") to have gist -&gt; "Deprecated."
-</li>
-  <li>improved latex generation</li>
-  <li>added domain operations: related, unrelated, roots, leafs, intermediates</li>
-</ul><h4><a href="http://reqt.org/reqTv1.2.jar">Version 1.2</a></h4><p>2011-11-14: <em>Tabular export/import and bug fixes</em></p>
+<li>added entity chapter for latex chapter generation:<br />
+d += chapter(&quot;My Chap&quot;, text -&gt; &quot;some text&quot;)<br />
+d += chapter(&quot;My Chap&quot;) has (feature(&quot;x&quot;),feature(&quot;y&quot;))</li>
+<li>added changeAll to tranform an entity and make old key deprecated:<br />
+d **= feature(&quot;x&quot;) -&gt; goal(&quot;x1&quot;)<br />
+// this will implicitly add a relation goal(&quot;x1&quot;) was feature(&quot;x&quot;)<br />
+// and also change feature(&quot;x&quot;) to have gist -&gt; &quot;Deprecated.&quot;</li>
+<li>improved latex generation</li>
+<li>added domain operations: related, unrelated, roots, leafs, intermediates</li>
+</ul>
+<h4><a href="http://reqt.org/reqTv1.2.jar">Version 1.2</a></h4>
+<p>2011-11-14: <em>Tabular export/import and bug fixes</em></p>
 <ul>
-  <li>no auto-creation/revision dates, delete attribute, intersect operator, tables in appendix, bugfix double text</li>
-  <li>export to tabSep:<br/> &gt; d tabSep "test" // will save entities to test.txt as a tab separated table</li>
-  <li>import from tabSep:<br/> &gt; importation.tabSep("infile.txt","outfile.scala","nameOfDomainVar")<br/> &gt; :load outfile.scala</li>
-  <li>remove attribute:<br/> &gt; d - creation // will remove attribute creation from all entities in d</li>
-  <li>overview tables moved to appendix in latex generation</li>
-  <li>removed automatic creation and revision dates on student requests</li>
-  <li>new intersect operator:<br/> &gt; d1 &amp; d2<br/> // gives a subdomain with all common keys and<br/> // Elements of d1 updated with attribute values of d2 if different</li>
-  <li>bugfix: removed double generation of text attributes in latex</li>
-</ul><h4><a href="http://reqt.org/reqTv1.1.jar">Version 1.1</a></h4><p>2011-11-14: <em>Settings, precondition, undefined, attribute removal</em></p>
+<li>no auto-creation/revision dates, delete attribute, intersect operator, tables in appendix, bugfix double text</li>
+<li>export to tabSep:<br />
+&gt; d tabSep &quot;test&quot; // will save entities to test.txt as a tab separated table</li>
+<li>import from tabSep:<br />
+&gt; importation.tabSep(&quot;infile.txt&quot;,&quot;outfile.scala&quot;,&quot;nameOfDomainVar&quot;)<br />
+&gt; :load outfile.scala</li>
+<li>remove attribute:<br />
+&gt; d - creation   // will remove attribute creation from all entities in d</li>
+<li>overview tables moved to appendix in latex generation</li>
+<li>removed automatic creation and revision dates on student requests</li>
+<li>new intersect operator:<br />
+&gt;  d1 &amp; d2<br />
+// gives a subdomain with all common keys and<br />
+// Elements of d1 updated with attribute values of d2 if different</li>
+<li>bugfix: removed double generation of text attributes in latex</li>
+</ul>
+<h4><a href="http://reqt.org/reqTv1.1.jar">Version 1.1</a></h4>
+<p>2011-11-14: <em>Settings, precondition, undefined, attribute removal</em></p>
 <pre><code>&gt; d += setting(&quot;noTikz&quot;) //no tikz package included and no drawings
 &gt; d += setting(&quot;latexPreamble&quot;, text -&gt; &quot;\\usepackage{graphics}&quot;) 
 &gt; d += setting(&quot;noContext&quot;) //no context chapter generated
@@ -169,12 +214,15 @@ dir    // same as ls
 &gt; d.undefined //will give Set of all undefined Ent keys in relations
 &gt; d += d.undefined //will add all undefined entities
 &gt; d - feature(&quot;x&quot;, gist) //for removing single attributes
-</code></pre><h4><a href="http://reqt.org/reqTv1.0.jar">Version 1.0</a></h4><p>2011-11-01: <em>First usage in teaching</em></p>
+</code></pre>
+<h4><a href="http://reqt.org/reqTv1.0.jar">Version 1.0</a></h4>
+<p>2011-11-01: <em>First usage in teaching</em></p>
 <ul>
-  <li>Prototypical DSL structure in place</li>
-  <li>Latex generation of specification and tikz generation of context diagram</li>
-  <li>Illustrates requirements as entities, relations and attributes</li>
-</ul></div>
+<li>Prototypical DSL structure in place</li>
+<li>Latex generation of specification and tikz generation of context diagram</li>
+<li>Illustrates requirements as entities, relations and attributes</li>
+</ul>
+</div>
 
 	<hr />
 
