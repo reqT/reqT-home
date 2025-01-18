@@ -1,8 +1,11 @@
-title=reqT Metamodel
+title=reqT Old Metamodel
 date=2014-09-13
 type=page
 status=published
 ~~~~~~
+
+## This site is DEPRECATED. </br> Visit New site: <a href="https://reqt.github.io/">reqt.github.io</a>
+
 ## Contents
 
 * <a href="reqT-cheat-sheet.pdf">reqT Cheat Sheet (pdf)</a>

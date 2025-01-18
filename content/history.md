@@ -1,24 +1,29 @@
-title=reqT History
+title=reqT Old History
 date=2014-08-01
 type=page
 status=published
 ~~~~~~
+
+## This site is DEPRECATED. </br> Visit New site: <a href="https://reqt.github.io/">reqt.github.io</a>
+
+New releases are published at [github.com/reqT/reqT/releases](https://github.com/reqT/reqT/releases) 
+
+## reqT inception
+
 The reqT development started in 2010 at <a href="http://serg.cs.lth.se/">Lund University</a> by Prof. <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>, to provide a free tool for illustrating essential requirements engineering concepts in software engineering teaching of MSc students. Since then reqT has grown into a comprehensive requirements engineering workbench and laboratory for capturing requirements modelling ideas based on experiences from practice and results from research.  
 
-<a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Current version</a> 
+### Old releases
 
-### Recent releases
+####[Version 3.1.x](http://reqt.org/reqT-v3.1.4.jar) 
 
-Recent releases are published at [github.com/reqT/reqT/releases](https://github.com/reqT/reqT/releases) 
 
+* Release [3.1.7](http://reqt.org/reqT-v3.1.7.jar) Final 3.x release
 * Release [3.1.4](http://reqt.org/reqT-v3.1.4.jar) update templates
 * Release [3.1.3](http://reqt.org/reqT-v3.1.3.jar) move to Scala 2.12
 * Release [3.1.2](http://reqt.org/reqT-v3.1.2.jar) add high dpi support
 * Release [3.1.1](http://reqt.org/reqT-v3.1.1.jar) add server mode
 * Release 3.1.0: bump to Scala 2.11.11
 * Release 3.0.2: update docs
-
-### Older versions
 
 ####[Version 3.0.1](http://reqt.org/reqT-v3.0.1.jar) 
 

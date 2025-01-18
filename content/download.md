@@ -1,10 +1,14 @@
-title=reqT Download
+title=reqT Old Download
 date=2014-08-01
 type=page
 status=published
 ~~~~~~
 
-<a href="http://reqt.org/reqT.jar" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download reqT.jar </a>  30MB v3.1.x-SNAPSHOT latest stable [all versions](history.html)
+<a href="https://github.com/reqT/reqT/releases/latest/download/reqT.jar" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download reqT.jar </a> latest stable [all versions](https://github.com/reqT/reqT/releases)
+
+## This site is DEPRECATED. </br> Visit New site: <a href="https://reqt.github.io/">reqt.github.io</a>
+
+## Old Getting started
 
 ###<a id="how-to-run">How to run reqT:</a>
 

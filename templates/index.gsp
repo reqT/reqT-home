@@ -3,16 +3,16 @@
 	<%include "menu.gsp"%>
 
 	<div class="page-header">
-		<h1>reqT Home</h1>
+		<h1>NEW HOME: <a href="https://reqt.github.io/">reqt.github.io</a> </br> This is site is DEPRECATED</h1>
 	</div>
   
-    <a href="download.html" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download reqT </a>
+    <a href="https://github.com/reqT/reqT/releases" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud-download"></span> Download latest reqT assets</a> 
     
-    <a href="https://github.com/reqT/reqT" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-align-left"></span> View reqT source code</a> 
+    <a href="https://github.com/reqT" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-align-left"></span> View reqT source code</a> 
     
   <div class="page-max-width">
     <h3> reqT &ndash; a scalable requirements tool </h3>
-    <p> reqT is a <b>free</b>, <b>flexible</b> and <b>scalable</b> requirements engineering tool <br/> for 
+    <p> reqT is an <b>open</b>, <b>flexible</b> and <b>scalable</b> requirements engineering tool <br/> for 
     system analysts, developers and software engineering students. </p>
 
     <p> With reqT you can ... 
@@ -28,8 +28,7 @@
     </p> 
     
     <p>
-    reqT is an open source project started in 2010 at 
-    <a href="http://serg.cs.lth.se/">Lund University</a>, Sweden.</br>
+    reqT is an open source project started in 2010 at Lund University, Sweden.</br>
     
     The development is lead by 
     <a href="http://cs.lth.se/bjornregnell">Björn Regnell</a>. 

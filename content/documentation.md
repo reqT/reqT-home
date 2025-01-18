@@ -1,8 +1,11 @@
-title=reqT Documentation
+title=reqT Old Documentation
 date=2014-08-01
 type=page
 status=published
 ~~~~~~
+
+## This site is DEPRECATED. </br> Visit New site: <a href="https://reqt.github.io/">reqt.github.io</a>
+
 ## Contents
 
 * <a href="#hello">Hello reqT</a>
